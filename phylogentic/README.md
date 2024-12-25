@@ -18,7 +18,8 @@ conda activate py27
 python /Data/ZYY/175r/mito/partitionfinder-2.1.1/partitionfinder-2.1.1/PartitionFinder.py ./
 ```
 
-## RAxML (part.txt from partitionfinder)
+## RAxML 
+###### part.txt from partitionfinder
 ```bash
 ./standard-RAxML-8.2.12/raxmlHPC-AVX -s $mito.phy -f a -x 1234 -p 1234 -# 100 -m GTRGAMMA -q $part.txt -n $OUT_PREFIX
 ```
