@@ -1,5 +1,5 @@
-#assembly
-##basecall, canu assembly and polish
+# assembly
+## basecall, canu assembly and polish
 ```bash
 guppy_basecaller -i $FAST5 -s $OUT_DIR -c dna_r9.4.1_450bps_hac.cfg --num_callers 1 --gpu_runners_per_device 12 --compress_fastq -x 'auto'
 cat $OUT_DIR/pass/*.fastq.gz > $basecalling.fastq.gz
@@ -16,21 +16,21 @@ python3 /Data/liyh/Software/nanopolish/scripts/nanopolish_makerange.py $PREFIX.c
 nanopolish vcf2fasta -g $PREFIX.contigs.fasta polished.*.vcf > $polished.fasta
 ```
 
-##QUAST
-######Generate report
+## QUAST
+###### Generate report
 ```bash
 pipenv run /Data/liyh/quast-5.1.0rc1/quast.py $polished.fasta --fungus -t 8 -o $polished_output
 ```
 
-##BUSCO
+## BUSCO
 ######BUSCO analysis to assess the completeness of the genome assembly
 ```bash
 conda activate busco
 busco -i $genome.fasta-o $OUT_PREFIX -m genome --auto-lineage-euk
 ```
 
-##Nanoplot
-######Sequencing QC
+## Nanoplot
+###### Sequencing QC
 ```bash
 conda activate nanoqc
 NanoPlot --summary $sequencing_summary.txt --loglength -o $OUTDIR
