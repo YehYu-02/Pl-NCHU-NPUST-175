@@ -35,3 +35,7 @@ busco -i $genome.fasta-o $OUT_PREFIX -m genome --auto-lineage-euk
 conda activate nanoqc
 NanoPlot --summary $sequencing_summary.txt --loglength -o $OUTDIR
 ```
+## mitogenome-assembly
+```bash
+circlator all $assembly.fasta $reads.fasta $OUT_DIR
+```
