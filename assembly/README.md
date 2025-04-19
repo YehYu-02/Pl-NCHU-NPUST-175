@@ -26,7 +26,7 @@ pipenv run /Data/liyh/quast-5.1.0rc1/quast.py $polished.fasta --fungus -t 8 -o $
 ###### BUSCO analysis to assess the completeness of the genome assembly
 ```bash
 conda activate busco
-busco -i $genome.fasta-o $OUT_PREFIX -m genome --auto-lineage-euk
+busco -i $genome.fasta -o $OUT_PREFIX -m genome -l $DATASET --augustus --augustus_species $Augustus_species
 ```
 
 ## Nanoplot
