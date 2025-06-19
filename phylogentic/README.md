@@ -24,6 +24,8 @@ python /Data/ZYY/175r/mito/partitionfinder-2.1.1/partitionfinder-2.1.1/Partition
 ./standard-RAxML-8.2.12/raxmlHPC-AVX -s $mito.phy -f a -x 1234 -p 1234 -# 100 -m GTRGAMMA -q $part.txt -n $OUT_PREFIX
 ```
 
-## iqtree (single substitution)
+## IQ-TREE (single substitution)
+```bash
 conda activate iqtree
 iqtree -s $mito.nex -m JTT+G -bb 1000 -nt AUTO
+```
