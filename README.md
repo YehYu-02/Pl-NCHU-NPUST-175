@@ -5,7 +5,7 @@
 
 ## 關於本研究
 
-*P. lilacinum* NCHU-NPUST-175 是一株具有防治台灣鋏蠓 (*Forcipomyia taiwana*) 潛力的昆蟲病原真菌。本研究以 Oxford Nanopore 長讀長定序取得該菌株的基因體,並透過比較基因體分析找出菌株與物種特異性的 DNA 區域 (distinctive genomic regions, DGRs),據此開發可用於環境偵測與田間施用前身分確認的分子標記。
+*P. lilacinum* NCHU-NPUST-175 是一株具有防治台灣鋏蠓 (*Forcipomyia taiwana*) 潛力的昆蟲病原真菌。本研究以 Oxford Nanopore 長讀長定序取得該菌株的基因體,並透過比較基因體分析找出菌株與物種特異性的 DNA 區域 (distinctive genomic regions, DGRs)，據此開發可用於環境偵測與田間施用前身分確認的分子標記。
 
 
 ## 資料夾結構
