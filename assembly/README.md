@@ -10,7 +10,7 @@ paste - - - - < $output.fastq | cut -f 1,2 | sed 's/^@/>/' | tr "\t" "\n" > $rea
 nanopolish index -d $FAST5 $reads.fasta 
 canu -p $PREFIX -d $OUT_DIR genomeSize=32m corOutCoverage=40 -nanopore-raw $reads.fasta
 bwa index $PREFIX.contigs.fasta
-bwa mem -x ont2d -t 8 $PREFIX.contigs.fasta reads.fasta | samtools sort -o $reads.sorted.bam -T $reads.tmp
+bwa mem -x ont2d -t 8 $PREFIX.contigs.fasta $reads.fasta | samtools sort -o $reads.sorted.bam -T $reads.tmp
 samtools index $reads.sorted.bam
 python3 /Data/liyh/Software/nanopolish/scripts/nanopolish_makerange.py $PREFIX.contigs.fasta | parallel --results $nanopolish.results -P 8 nanopolish variants --consensus -o polished.{1}.vcf -w {1} -r $reads.fasta -b $reads.sorted.bam -g $PREFIX.contigs.fasta -t 4 --min-candidate-frequency 0.1
 nanopolish vcf2fasta -g $PREFIX.contigs.fasta polished.*.vcf > $polished.fasta
