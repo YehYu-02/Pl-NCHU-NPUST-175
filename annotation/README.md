@@ -25,7 +25,7 @@ zcat sister_orgs/*faa.gz > $db.faa
 ## BUSCO
 ```bash
 conda activate busco
-busco -i $protein.fasta-o $OUT_PREFIX -m protein --auto-lineage-euk
+busco -i $protein.fasta -o $OUT_PREFIX -m protein --auto-lineage-euk
 ```
 
 ## Interproscan
@@ -52,7 +52,7 @@ run_dbcan $fungap_out_prot.faa protein --out_dir $OUT_DIR
 conda activate py39
 curl -q https://dl.secondarymetabolites.org/releases/latest/docker-run_antismash-full > ~/bin/run_antismash
 chmod a+x ~/bin/run_antismash
-run_antismash $genome.fasta $OUT --genefinding-tool prodigal --cb-general --asf –knownclusterblast
+run_antismash $genome.fasta $OUT --genefinding-tool prodigal --cb-general --asf -knownclusterblast
 ```
 
 # Barrnap
